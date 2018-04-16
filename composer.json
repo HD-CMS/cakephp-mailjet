@@ -1,5 +1,13 @@
 {
 	"name": "hd-cms/cakephp-mailjet",
+	"description": "CakePHP 2.x Mailjet Transport.",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Dennis Hemeier",
+			"email": "d.hemeier@hd-cms.de"
+		}
+	],
 	"type": "cakephp-plugin",
 	"extra": {
 		"installer-name": "Mailjet"
