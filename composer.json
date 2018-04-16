@@ -1,0 +1,10 @@
+{
+	"name": "hd-cms/cakephp-mailjet",
+	"type": "cakephp-plugin",
+	"extra": {
+		"installer-name": "Mailjet"
+	},
+	"require": {
+		"mailjet/mailjet-apiv3-php": "^1.2"
+	}
+}
