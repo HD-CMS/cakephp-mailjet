@@ -5,6 +5,7 @@
 		"installer-name": "Mailjet"
 	},
 	"require": {
+		"php": ">=5.4.0",
 		"mailjet/mailjet-apiv3-php": "^1.2"
 	}
 }
