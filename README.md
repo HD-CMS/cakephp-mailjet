@@ -17,7 +17,7 @@ Allows sending emails via Mailjet by using the provided Mailjet SDK.
 Currently you can send emails with the following parameters: `to`, `from` and `attachments`.
 Also you can set multiple `to` recipients. Read more on the official [CakePHP Mail Documentation](https://book.cakephp.org/2.0/en/core-utility-libraries/email.html)
 
-## Example of configuration
+## Example configuration
 
 ```php
 <?php
@@ -26,7 +26,6 @@ class EmailConfig {
 
     public $mailjet = array(
         'transport' => 'Mailjet.Mailjet',
-        'mj_domain' => 'domain.mailjet.org',
         'mj_api_key' => 'mailjet-api-key',
 	'mj_api_secret' => 'mailjet-api-secret',
 	'from' => array('no-reply@my-app.com' => 'My App'),
@@ -36,8 +35,8 @@ class EmailConfig {
 
 ## Send Transactional Email templates
 To send a transactional template from Mailjet you must set the TemplateID as
-custom header param. In this case, all template variables set over `$email->viewVars(['key' => 'value'])`
-are available inside the transactional Template.
+custom header param. In this case, all template variables set to viewVars
+are available inside the transactional template.
 
 Example usage of Mailjet templating:
 
