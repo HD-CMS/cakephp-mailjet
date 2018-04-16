@@ -80,8 +80,20 @@ class MailjetTransport extends AbstractTransport
         }
         else
         {
-            $message['TextPart'] = $email->message(CakeEmail::MESSAGE_TEXT);
-            $message['HTMLPart'] = $email->message(CakeEmail::MESSAGE_HTML);
+            $format = $email->emailFormat();
+            switch ($format)
+            {
+                case 'text':
+                    $message['TextPart'] = $email->message(CakeEmail::MESSAGE_TEXT);
+                    break;
+                case 'html':
+                    $message['HTMLPart'] = $email->message(CakeEmail::MESSAGE_HTML);
+                    break;
+                default:
+                    $message['TextPart'] = $email->message(CakeEmail::MESSAGE_TEXT);
+                    $message['HTMLPart'] = $email->message(CakeEmail::MESSAGE_HTML);
+                    break;
+            }
         }
 
         $body = [
